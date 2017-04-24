@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/wox648/projets/docker/kafka'
+let g:netrw_dirhist_2='/save/projets/pom-parent'
+let g:netrw_dirhist_3='/save/projets/pom/pom-logclient'
+let g:netrw_dirhist_4='/save/projets/ozone/lib/model/schema-cache'
+let g:netrw_dirhist_5='/save/projets/ozone/lib/model/schema-cache/schema-cache-log'
+let g:netrw_dirhist_6='/save/projets/ozone/lib/model/schema-cache'
+let g:netrw_dirhist_7='/tmp/model/alert-model'
+let g:netrw_dirhist_8='/save/projets/pom/pom-parent'
