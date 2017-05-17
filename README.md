@@ -14,13 +14,9 @@ EOF
 sudo apt-get update && apt-get dist-upgrade
 ```
 
-## i3 config
-
-bindsym Control+Mod1+L exec i3lock -d
-
-## vim config
-
 ## mc config
+
+TODO
 
 ## bashrc
 
@@ -35,6 +31,16 @@ HISTFILESIZE=20000
 
 ```bash
 sudo apt-get install mc tree unar htop vim xbacklight scrot strace evince eog icedove libreoffice git wireshark-gtk build-essential
+```
+openjdk-8-jdk
+xbacklight
+scrot
+strace
+arandr
+usbmount
+nfs-common
+keepass2
+curl
 
 ## scala + sbt + intellij + java
 
@@ -51,6 +57,9 @@ echo 'export PATH="$PATH:/opt/idea*/bin"' > /etc/profile.d/intellijPath
 add idea.sh to PATH
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
-## Ansible
+## xfluxgui
 
-[example here](https://blog.josephkahn.io/articles/ansible/)
+```bash
+git clone git@github.com:afreakk/xFluxGUI.git
+```
+
