@@ -42,6 +42,10 @@ nfs-common
 keepass2
 curl
 
+### debugging tools
+
+nload
+
 ## scala + sbt + intellij + java
 
 
