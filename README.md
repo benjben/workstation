@@ -1,15 +1,15 @@
 ## TODO
 
-1. Add backports
+1. Add [backports](#jessie-backports-as-default)
 1. Install [packages](#packages)
-1. Download images
-1. `.bashrc` conf
-1. `i3` conf
-1. `xession` conf
-1. `vim` conf
+1. Download [images](#images)
+1. [.bashrc](#bashrc) conf
+1. [i3](./i3) conf
+1. [xession](./xsession) conf
+1. [vim](./vim) conf
 1. Import bookmarks
 1. Mail conf
-1. Generate SSH keys and add to Github
+1. [Generate SSH keys](#ssh-keys) and add to Github
 
 ## packages
 
