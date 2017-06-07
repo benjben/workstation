@@ -140,6 +140,7 @@ bar {
 	position top
 }
 
+# use xev to determine a bindcode
 bindcode 127 exec scrot -q 100 '/tmp/%Y%m%d-%H%M%S.png'
 bindcode 232 exec xbacklight -dec 10
 bindcode 233 exec xbacklight -inc 10
