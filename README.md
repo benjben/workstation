@@ -1,6 +1,8 @@
 ## TODO
 
-1. Add [backports](#jessie-backports-as-default)
+This is based on Debian minimal install, with [i3](https://i3wm.org/) as window manager.
+
+1. Add [backports](#stretch-backports-as-default)
 1. Install [packages](#packages)
 1. Download [images](#images)
 1. [.bashrc](#bashrc) conf
@@ -11,7 +13,32 @@
 1. Mail conf
 1. [Generate SSH keys](#ssh-keys) and add to Github
 
+## Stretch backports as default
+
+```bash
+$ sudo echo "deb http://ftp.debian.org/debian stretch-backports main" > /etc/apt/sources.list.d/backports.list
+
+$ sudo echo > /etc/apt/preferences.d/backports << EOF
+Package: *
+Pin: release a=stretch-backports
+Pin-Priority: 900
+EOF
+
+$ sudo apt-get update && apt-get dist-upgrade
+```
+
 ## packages
+
+### system
+
+xorg
+i3
+lightdm
+network-manager
+alsa-utils
+alsamixergui
+firmware-iwlwifi
+nfs-common
 
 ### utility
 
@@ -19,35 +46,36 @@ mc
 tree
 unar
 vim
-i3
-xbacklight
 arandr
-usbmount
-nfs-common
 keepass2
 curl
+xbacklight
+usbmount
 [xfluxgui](https://github.com/xflux-gui/xflux-gui)
 
 ### documents/media
 
+iceweasel
 icedove
 scrot
-eog
+feh
 libreoffice
 evince
 imagemagick
 vlc
 gimp
-[calibre](https://calibre-ebook.com/download_linux)
+calibre
 
 ### development
 
 build-essential
 openjdk-8-jdk
 git
-[scala](https://cdn3.geckoandfly.com/wp-content/uploads/2013/11/Misc_Motivational_323193.jpg)
+scala
 [sbt](http://www.scala-sbt.org/download.html)
 [intellij](https://www.jetbrains.com/idea/download/#section=linux)
+dirmngr
+apt-transport-https
 
 ### debugging
 
@@ -73,22 +101,11 @@ HISTSIZE=10000
 HISTFILESIZE=20000
 ```
 
-## Jessie backports as default
-
-```bash
-$ sudo echo "deb http://ftp.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/backports.list
-
-$ sudo echo > /etc/apt/preferences.d/backports << EOF
-Package: *
-Pin: release a=jessie-backports
-Pin-Priority: 900
-EOF
-
-$ sudo apt-get update && apt-get dist-upgrade
-```
-
 ## SSH keys
 
 ```bash
 ssh-keygen -t rsa -b 4096 -C "mail@to.com"
 ```
+
+Add public key to [github](https://github.com/settings/keys).
+
