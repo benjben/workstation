@@ -5,11 +5,11 @@ This is based on Debian minimal install, with [i3](https://i3wm.org/) as window 
 1. Add [backports](#stretch-backports-as-default)
 1. Install [packages](#packages)
 1. Download [images](#images)
-1. [.bashrc](#bashrc) conf
-1. [i3](./i3) conf
-1. [xession](./xsession) conf
-1. [vim](./vim) conf
-1. Import bookmarks
+1. [.bashrc](#bashrc)
+1. [i3](./.config/i3)
+1. [.xsessionrc](#xsessionrc)
+1. [vim](#vim)
+1. Import [bookmarks](./bookmarks.json)
 1. Mail conf
 1. [Generate SSH keys](#ssh-keys) and add to Github
 
@@ -51,6 +51,7 @@ keepass2
 curl
 xbacklight
 usbmount
+android-tools-adb
 [xfluxgui](https://github.com/xflux-gui/xflux-gui)
 
 ### documents/media
@@ -65,6 +66,7 @@ imagemagick
 vlc
 gimp
 calibre
+[youtube-dl](https://github.com/rg3/youtube-dl)
 
 ### development
 
@@ -88,9 +90,11 @@ gdb
 
 ## images
 
-* [~/wallpaper.jpg](https://cdn3.geckoandfly.com/wp-content/uploads/2013/11/Misc_Motivational_323193.jpg)
-* [~/screenlocked.png](https://4.bp.blogspot.com/-LUI68deRfgY/U1n2UG6k_sI/AAAAAAAA0kg/wnu-P0HpbRo/s0/Locked+Keyboard_Ultra+HD.jpg)
-`convert <srcImage.jpg> -resize 1920x1080 screenlock.png`
+```bash
+$ wget https://cdn3.geckoandfly.com/wp-content/uploads/2013/11/Misc_Motivational_323193.jpg -O ~/.config/wallpaper.jpg
+
+$ wget https://4.bp.blogspot.com/-LUI68deRfgY/U1n2UG6k_sI/AAAAAAAA0kg/wnu-P0HpbRo/s0/Locked+Keyboard_Ultra+HD.jpg -O ~/.config/screenlocked.png
+```
 
 ## bashrc
 
@@ -99,6 +103,24 @@ PS1="\e[94m\u \e[39m@ \e[93m\h \e[91m\w \e[39m$ "
 
 HISTSIZE=10000
 HISTFILESIZE=20000
+```
+
+## xsessionrc
+
+
+```bash
+JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+PATH=$PATH:/opt/idea-IC-163.11103.6/bin
+PATH=$PATH:~/.local/bin/
+```
+
+## vim
+
+
+```bash
+$ git clone git@github.com:tpope/vim-pathogen.git
+$ git clone git@github.com:vim-syntastic/syntastic.git
+$ git clone git@github.com:godlygeek/tabular.git
 ```
 
 ## SSH keys
