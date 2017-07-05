@@ -66,6 +66,7 @@ imagemagick
 vlc
 gimp
 calibre
+ffmpeg
 [youtube-dl](https://github.com/rg3/youtube-dl)
 
 ### development
