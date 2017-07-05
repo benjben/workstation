@@ -93,7 +93,7 @@ gdb
 ```bash
 $ wget https://cdn3.geckoandfly.com/wp-content/uploads/2013/11/Misc_Motivational_323193.jpg -O ~/.config/wallpaper.jpg
 
-$ wget https://4.bp.blogspot.com/-LUI68deRfgY/U1n2UG6k_sI/AAAAAAAA0kg/wnu-P0HpbRo/s0/Locked+Keyboard_Ultra+HD.jpg -O ~/.config/screenlocked.png
+$ wget https://4.bp.blogspot.com/-LUI68deRfgY/U1n2UG6k_sI/AAAAAAAA0kg/wnu-P0HpbRo/s0/Locked+Keyboard_Ultra+HD.jpg -O - | convert - -resize 1920x1080 ~/.config/screenlocked.png
 ```
 
 ## bashrc
