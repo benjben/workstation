@@ -52,7 +52,7 @@ curl
 xbacklight
 usbmount
 android-tools-adb
-[xflux](https://justgetflux.com/linux.html)
+redshift
 
 ### documents/media
 
