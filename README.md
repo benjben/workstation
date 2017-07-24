@@ -50,7 +50,7 @@ arandr
 keepass2
 curl
 xbacklight
-usbmount
+pmount
 android-tools-adb
 redshift
 
