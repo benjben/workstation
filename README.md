@@ -100,7 +100,7 @@ $ wget https://4.bp.blogspot.com/-LUI68deRfgY/U1n2UG6k_sI/AAAAAAAA0kg/wnu-P0HpbR
 ## bashrc
 
 ```bash
-PS1="\[\033[0;94m\]\u \[\033[0;39m\]\]@ \[\033[0;93m\]\h \[\033[0;91m\]\w \[\033[0;39m\]$ \[\033[0m\]"
+PS1="\[\033[0;94m\]\u \[\033[0;39m\]@ \[\033[0;93m\]\h \[\033[0;91m\]\w \[\033[0;39m\]$ \[\033[0m\]"
 
 HISTSIZE=10000
 HISTFILESIZE=20000
