@@ -88,6 +88,7 @@ wireshark-gtk
 nload
 sysstat
 gdb
+net-tools
 
 ## images
 
