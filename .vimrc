@@ -43,6 +43,7 @@ set smarttab
 set autoindent
 set paste
 set undofile " Maintain undo history between sessions
+set undodir=~/.vim/undo
 set cursorline
 hi CursorLine cterm=NONE ctermfg=white
 
