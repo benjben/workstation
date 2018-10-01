@@ -75,10 +75,10 @@ build-essential
 openjdk-8-jdk
 git
 scala
-[sbt](http://www.scala-sbt.org/download.html)
-[intellij](https://www.jetbrains.com/idea/download/#section=linux)
 dirmngr
 apt-transport-https
+[sbt](http://www.scala-sbt.org/download.html)
+[intellij](https://www.jetbrains.com/idea/download/#section=linux)
 
 ### debugging
 
@@ -105,6 +105,17 @@ PS1="\[\033[0;94m\]\u \[\033[0;39m\]@ \[\033[0;93m\]\h \[\033[0;91m\]\w \[\033[0
 
 HISTSIZE=10000
 HISTFILESIZE=20000
+
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
+export SBT_OPTS="-Xmx2G -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=2G -Xss2M  -Duser.timezone=GMT"
+
+alias nas='sudo mount 192.168.1.6:/volume1/video /home/bnjzer/video/nas/ && \
+  sudo mount 192.168.1.6:/volume1/photo /home/bnjzer/photo/nas/ && \
+  sudo mount 192.168.1.6:/volume1/music /home/bnjzer/music/nas/ && \
+  sudo mount 192.168.1.6:/volume1/documents /home/bnjzer/documents/nas/'
+alias unas='sudo umount -f /home/bnjzer/{video,photo,music,documents}/nas/'
+
+alias tel='adb pull /sdcard/DCIM/Camera && adb pull /sdcard/WhatsApp/Media/WhatsApp\ Video && adb pull /sdcard/WhatsApp/Media/WhatsApp\ Images && adb pull /sdcard/Pictures/Screenshots/'
 ```
 
 ## xsessionrc
