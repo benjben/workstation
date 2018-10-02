@@ -1,6 +1,6 @@
 ## TODO
 
-This is based on Debian minimal install, with [i3](https://i3wm.org/) as window manager.
+Debian with [i3](https://i3wm.org/) on Dell XPS 13 9370, based on Debian minimal install.
 
 1. Add [backports](#stretch-backports-as-default)
 1. Install [packages](#packages)
@@ -9,14 +9,15 @@ This is based on Debian minimal install, with [i3](https://i3wm.org/) as window 
 1. [i3](./.config/i3)
 1. [.xsessionrc](#xsessionrc)
 1. [vim](#vim)
-1. Import [bookmarks](./bookmarks.json)
-1. Mail conf
 1. [Generate SSH keys](#ssh-keys) and add to Github
+1. [Install webcam](https://www.dell.com/community/Linux-General/Dell-xps-13-9370-Webcam-support/m-p/6094475#M16157)
+1. [adb](./adb.sh)
+1. [Checklist](#checklist)
 
 ## Stretch backports as default
 
 ```bash
-$ sudo echo "deb http://ftp.debian.org/debian stretch-backports main" > /etc/apt/sources.list.d/backports.list
+$ sudo echo "deb http://ftp.debian.org/debian stretch-backports main non-free" > /etc/apt/sources.list.d/backports.list
 
 $ sudo echo > /etc/apt/preferences.d/backports << EOF
 Package: *
@@ -37,7 +38,6 @@ lightdm
 network-manager
 alsa-utils
 alsamixergui
-firmware-iwlwifi
 nfs-common
 
 ### utility
@@ -49,17 +49,14 @@ vim
 arandr
 keepass2
 curl
-xbacklight
+cheese
 pmount
 android-tools-adb
 redshift
 
 ### documents/media
 
-iceweasel
-icedove
 scrot
-feh
 libreoffice
 evince
 imagemagick
@@ -67,6 +64,8 @@ vlc
 gimp
 calibre
 ffmpeg
+
+
 [youtube-dl](https://github.com/rg3/youtube-dl)
 
 ### development
@@ -75,8 +74,9 @@ build-essential
 openjdk-8-jdk
 git
 scala
-dirmngr
 apt-transport-https
+
+
 [sbt](http://www.scala-sbt.org/download.html)
 [intellij](https://www.jetbrains.com/idea/download/#section=linux)
 
@@ -98,6 +98,8 @@ $ wget https://cdn3.geckoandfly.com/wp-content/uploads/2013/11/Misc_Motivational
 $ wget https://4.bp.blogspot.com/-LUI68deRfgY/U1n2UG6k_sI/AAAAAAAA0kg/wnu-P0HpbRo/s0/Locked+Keyboard_Ultra+HD.jpg -O - | convert - -resize 1920x1080 ~/.config/screenlocked.png
 ```
 
+[Set up wallpaper](https://vorkbaard.nl/update-alternatives-in-debian-wheezy-changing-the-logon-wallpaper-the-right-way/)
+
 ## bashrc
 
 ```bash
@@ -114,12 +116,9 @@ alias nas='sudo mount 192.168.1.6:/volume1/video /home/bnjzer/video/nas/ && \
   sudo mount 192.168.1.6:/volume1/music /home/bnjzer/music/nas/ && \
   sudo mount 192.168.1.6:/volume1/documents /home/bnjzer/documents/nas/'
 alias unas='sudo umount -f /home/bnjzer/{video,photo,music,documents}/nas/'
-
-alias tel='adb pull /sdcard/DCIM/Camera && adb pull /sdcard/WhatsApp/Media/WhatsApp\ Video && adb pull /sdcard/WhatsApp/Media/WhatsApp\ Images && adb pull /sdcard/Pictures/Screenshots/'
 ```
 
 ## xsessionrc
-
 
 ```bash
 JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
@@ -144,4 +143,13 @@ ssh-keygen -t rsa -b 4096 -C "mail@to.com"
 ```
 
 Add public key to [github](https://github.com/settings/keys).
+
+## Checklist
+
+- WiFi
+- Sound
+- Micro
+- Webcam
+- Blue light
+- Keys
 
