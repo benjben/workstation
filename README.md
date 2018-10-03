@@ -9,8 +9,7 @@ This is based on Debian minimal install, with [i3](https://i3wm.org/) as window 
 1. [i3](./.config/i3)
 1. [.xsessionrc](#xsessionrc)
 1. [vim](#vim)
-1. Import [bookmarks](./bookmarks.json)
-1. Mail conf
+1. [redshift](#redshift)
 1. [Generate SSH keys](#ssh-keys) and add to Github
 
 ## Stretch backports as default
@@ -124,6 +123,12 @@ $ mkdir ~/.vim/undodir
 $ git clone git@github.com:tpope/vim-pathogen.git
 $ git clone git@github.com:vim-syntastic/syntastic.git
 $ git clone git@github.com:godlygeek/tabular.git
+```
+
+## redshift
+
+```bash
+systemctl --user enable redshift
 ```
 
 ## SSH keys
