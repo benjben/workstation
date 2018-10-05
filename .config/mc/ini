@@ -93,7 +93,7 @@ menubar_visible=1
 free_space=1
 horizontal_split=0
 vertical_equal=1
-left_panel_size=119
+left_panel_size=159
 horizontal_equal=1
 top_panel_size=1
 
@@ -113,6 +113,8 @@ clipboard_paste=
 base_color=
 xterm-256color=
 color_terminals=
+
+xterm=
 
 [Panels]
 simple_swap=false
@@ -134,6 +136,8 @@ permission_mode=true
 torben_fj_mode=false
 quick_search_mode=2
 select_flags=6
+
+panel_scroll_center=false
 
 [Panelize]
 Find *.orig after patching=find . -name \\*.orig -print
