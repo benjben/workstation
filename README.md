@@ -38,6 +38,7 @@ alsa-utils
 android-tools-adb
 apt-transport-https
 arandr
+blueman
 build-essential
 calibre
 cheese
@@ -59,7 +60,10 @@ net-tools
 network-manager
 nfs-common
 nload
+nmap
 openjdk-8-jdk
+openvpn
+pavucontrol
 pmount
 redshift
 scala
@@ -75,10 +79,11 @@ xorg
 
 ### other
 
+[intellij](https://www.jetbrains.com/idea/download/#section=linux)
+[sbt](http://www.scala-sbt.org/download.html)
+[spotify](https://www.spotify.com/fr/download/linux/)
 [youtube-dl](https://github.com/rg3/youtube-dl)
 [zoom](https://zoom.us/download?os=linux)
-[sbt](http://www.scala-sbt.org/download.html)
-[intellij](https://www.jetbrains.com/idea/download/#section=linux)
 
 ## images
 

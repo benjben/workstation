@@ -12,6 +12,7 @@ general {
 }
 
 order += "volume master"
+order += "volume bluetooth"
 # order += "cpu_temperature 0"
 #order += "disk /"
 #order += "disk /home"
@@ -25,6 +26,11 @@ volume master {
         device = "default"
         mixer = "Master"
         mixer_idx = 0
+}
+
+volume bluetooth {
+        format = "♪: %volume"
+        device = "pulse:bluez_sink.00_0C_8A_C4_C1_DA.a2dp_sink"
 }
 
 cpu_temperature 0 {
