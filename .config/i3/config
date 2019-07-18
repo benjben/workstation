@@ -156,6 +156,7 @@ bindsym XF86AudioLowerVolume exec "if pacmd list-sinks | grep 00_0C_8A_C4_C1_DA;
 bindsym XF86AudioMute exec "if pacmd list-sinks | grep 00_0C_8A_C4_C1_DA; then pactl set-sink-mute bluez_sink.00_0C_8A_C4_C1_DA.a2dp_sink toggle; else pactl set-sink-mute 0 toggle; fi"
 bindsym Ctrl+Mod1+l exec i3lock -i ~/.config/screenlocked.png -t -u
 bindsym Mod1+Tab exec bash -c '(setxkbmap -query | grep -q us) && setxkbmap fr || setxkbmap us'
+bindsym Print exec scrot 'screenshot-%Y-%m-%d-%T_$wx$h.png'
 
 exec --no-startup-id feh --bg-scale '/home/ben/.config/wallpaper.jpg' 
 
