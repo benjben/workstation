@@ -13,6 +13,7 @@ Debian with [i3](https://i3wm.org/) on Dell XPS 13 9370, based on Debian minimal
 1. [Generate SSH keys](#ssh-keys) and add to Github
 1. [Install webcam](https://www.dell.com/community/Linux-General/Dell-xps-13-9370-Webcam-support/m-p/6094475#M16157)
 1. [adb](./adb.sh)
+1. [git](#git)
 1. [Checklist](#checklist)
 
 ## Stretch backports as default
@@ -144,6 +145,12 @@ ssh-keygen -t rsa -b 4096 -C "mail@to.com"
 ```
 
 Add public key to [github](https://github.com/settings/keys).
+
+## Git
+
+```bash
+$ git config --global core.excludesfile '~/.gitignore'
+```
 
 ## Checklist
 
