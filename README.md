@@ -76,6 +76,7 @@ unar
 vim
 vlc
 wireshark-gtk 
+xclip
 xorg
 
 ### other
@@ -99,19 +100,16 @@ $ wget https://4.bp.blogspot.com/-LUI68deRfgY/U1n2UG6k_sI/AAAAAAAA0kg/wnu-P0HpbR
 ## bashrc
 
 ```bash
-PS1="\[\033[0;94m\]\u \[\033[0;39m\]@ \[\033[0;93m\]\h \[\033[0;91m\]\w \[\033[0;39m\]$ \[\033[0m\]"
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1> /'
+}
+PS1=" \[\033[0;91m\]\w \[\033[0;2m\]\$(parse_git_branch)\[\033[0;0m\]"
 
 HISTSIZE=10000
 HISTFILESIZE=20000
 
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 export SBT_OPTS="-Xmx2G -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=2G -Xss2M  -Duser.timezone=GMT"
-
-alias nas='sudo mount 192.168.1.6:/volume1/video /home/bnjzer/video/nas/ && \
-  sudo mount 192.168.1.6:/volume1/photo /home/bnjzer/photo/nas/ && \
-  sudo mount 192.168.1.6:/volume1/music /home/bnjzer/music/nas/ && \
-  sudo mount 192.168.1.6:/volume1/documents /home/bnjzer/documents/nas/'
-alias unas='sudo umount -f /home/bnjzer/{video,photo,music,documents}/nas/'
 ```
 
 ## xsessionrc
@@ -120,16 +118,6 @@ alias unas='sudo umount -f /home/bnjzer/{video,photo,music,documents}/nas/'
 JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 PATH=$PATH:/opt/idea-IC-163.11103.6/bin
 PATH=$PATH:~/.local/bin/
-```
-
-## vim
-
-
-```bash
-$ mkdir ~/.vim/undodir
-$ git clone git@github.com:tpope/vim-pathogen.git
-$ git clone git@github.com:vim-syntastic/syntastic.git
-$ git clone git@github.com:godlygeek/tabular.git
 ```
 
 ## redshift
@@ -143,7 +131,6 @@ systemctl --user enable redshift
 ```bash
 ssh-keygen -t rsa -b 4096 -C "mail@to.com"
 ```
-
 Add public key to [github](https://github.com/settings/keys).
 
 ## Git
