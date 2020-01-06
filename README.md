@@ -7,13 +7,11 @@ Debian with [i3](https://i3wm.org/) on Dell XPS 13 9370, based on Debian minimal
 1. Download [images](#images)
 1. [.bashrc](#bashrc)
 1. [i3](./.config/i3)
-1. [.xsessionrc](#xsessionrc)
 1. [vim](#vim)
 1. [redshift](#redshift)
-1. [Generate SSH keys](#ssh-keys) and add to Github
 1. [Install webcam](https://www.dell.com/community/Linux-General/Dell-xps-13-9370-Webcam-support/m-p/6094475#M16157)
-1. [adb](./adb.sh)
 1. [git](#git)
+1. [touchpad](#touchpad)
 1. [Checklist](#checklist)
 
 ## Stretch backports as default
@@ -81,7 +79,6 @@ xorg
 
 ### other
 
-[intellij](https://www.jetbrains.com/idea/download/#section=linux)
 [sbt](http://www.scala-sbt.org/download.html)
 [spotify](https://www.spotify.com/fr/download/linux/)
 [youtube-dl](https://github.com/rg3/youtube-dl)
@@ -112,32 +109,32 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 export SBT_OPTS="-Xmx2G -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=2G -Xss2M  -Duser.timezone=GMT"
 ```
 
-## xsessionrc
-
-```bash
-JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-PATH=$PATH:/opt/idea-IC-163.11103.6/bin
-PATH=$PATH:~/.local/bin/
-```
-
 ## redshift
 
 ```bash
 systemctl --user enable redshift
 ```
 
-## SSH keys
-
-```bash
-ssh-keygen -t rsa -b 4096 -C "mail@to.com"
-```
-Add public key to [github](https://github.com/settings/keys).
-
 ## Git
 
 ```bash
 $ git config --global core.excludesfile '~/.gitignore'
 ```
+
+## Touchpad
+
+```
+Section "InputClass"
+    Identifier "libinput touchpad catchall"
+    Driver "libinput"
+    MatchIsTouchpad "on"
+    MatchDevicePath "/dev/input/event*"
+    Option "Tapping" "on"
+    Option "TappingButtonMap" "lmr"
+EndSection
+```
+
+https://wiki.archlinux.org/index.php/Libinput#Touchpad_configuration
 
 ## Checklist
 
